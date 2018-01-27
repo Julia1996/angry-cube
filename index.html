@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    @keyframes rotateCube{
+      100%{
+        transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
+    @keyframes strike1{
+      0%{
+        transform: translate(0,0);
+      }
+      100%{
+        transform: translate(-500px, -500px);
+      }
+    }
+    @keyframes strike2{
+      0%{
+        transform: translate(0,0);
+      }
+      100%{
+        transform: translate(-500px, 500px);
+      }
+    }
+    @keyframes strike3{
+      0%{
+        transform: translate(0,0);
+      }
+      100%{
+        transform: translate(500px, -500px);
+      }
+    }
+    @keyframes strike4{
+      0%{
+        transform: translate(0,0);
+      }
+      100%{
+        transform: translate(500px, 500px);
+      }
+    }
+    body{
+      perspective: 900px;
+    }
+    .cube{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      transform-style: preserve-3d;
+      transition: transform;
+      transform-origin: 50% 50% 100px;
+      margin: 100px auto;
+    }
+    .cube:hover{
+      animation-name: rotateCube;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    .side{
+      width: 200px;
+      height: 200px;
+      background: rgba(0,0,0,.5);
+      border: 5px solid red;
+      box-sizing: border-box;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: 50% 50% 100px;
+      text-align: center;
+      color: white;
+      line-height: 200px;
+      font-size: 30px;
+    }
+    .side span{
+      display: block;
+      width: 5px;
+      height: 5px;
+      background: black;
+      border-radius: 50%;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      position: absolute;
+    }
+    .side1{
+      transform: rotateX(90deg);
+    }
+    .side2{
+      transform: rotateX(-90deg);
+    }
+    .side3{
+      transform: rotateX(180deg);
+    }
+    .side4{
+      transform: rotateY(90deg);
+    }
+    .side5{
+      transform: rotateX(-90deg);
+    }
+    .side6{
+      
+    }
+    .span1{
+      top: 0;
+      left: 0;
+    }
+    .span2{
+      top: 0;
+      right: 0;
+    }
+    .span3{
+      bottom: 0;
+      left: 0;
+    }
+    .span4{
+      right: 0;
+      bottom: 0;
+    }
+    .strike1{
+      animation-name: strike1;
+    }
+    .strike2{
+      animation-name: strike2;
+    }
+    .strike3{
+      animation-name: strike3;
+    }
+    .strike4{
+      animation-name: strike4;
+    }
+  </style>
+</head>
+<body>
+  <div class="cube">
+    <div class="side side1">
+      <span class="span1 strike1"></span>
+      <span class="span2 strike3"></span>
+      <span class="span3 strike2"></span>
+      <span class="span4 strike4"></span>
+    </div>
+    <div class="side side2">
+      <span class="span1 strike1"></span>
+      <span class="span2 strike3"></span>
+      <span class="span3 strike2"></span>
+      <span class="span4 strike4"></span>
+    </div>
+    <div class="side side3">
+      <span class="span1 strike1"></span>
+      <span class="span2 strike3"></span>
+      <span class="span3 strike2"></span>
+      <span class="span4 strike4"></span>
+    </div>
+    <div class="side side4">
+      <span class="span1 strike1"></span>
+      <span class="span2 strike3"></span>
+      <span class="span3 strike2"></span>
+      <span class="span4 strike4"></span>
+    </div>
+    <div class="side side5">
+      <span class="span1 strike1"></span>
+      <span class="span2 strike3"></span>
+      <span class="span3 strike2"></span>
+      <span class="span4 strike4"></span>
+    </div>
+    <div class="side side6">
+      <span class="span1 strike1"></span>
+      <span class="span2 strike3"></span>
+      <span class="span3 strike2"></span>
+      <span class="span4 strike4"></span>
+    </div>
+  </div>
+</body>
+</html>
